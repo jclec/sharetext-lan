@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>sharetext-lan</title>
+        <link rel="stylesheet" href="/static/main.css" />
+        <link rel="stylesheet" href="/static/index.css" />
+    </head>
+    <body>
+        <h2>Share text over LAN</h2>
+
+        <button id="copyButton">Copy to Clipboard</button>
+        <span id="copyStatus"></span>
+
+        <span id="charCount" style="float: right"></span>
+
+        <br /><br />
+
+        <textarea id="text" spellcheck="false" autofocus></textarea>
+
+        <br /><br />
+
+        <button onclick="location = '/logout'">Logout</button>
+
+        <span style="float: right">
+            <span id="sizeError"></span>
+            <span id="disconnectError"></span>
+        </span>
+
+        <script src="/static/index.js"></script>
+    </body>
+</html>

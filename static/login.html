@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Login</title>
+        <link rel="stylesheet" href="/static/main.css" />
+        <link rel="stylesheet" href="/static/login.css" />
+    </head>
+    <body>
+        <h2>Login</h2>
+
+        <form method="POST">
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                autocomplete="off"
+                autofocus
+            />
+
+            <button type="submit">Login</button>
+        </form>
+
+        {message}
+    </body>
+</html>
