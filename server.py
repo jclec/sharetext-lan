@@ -1,9 +1,10 @@
 import os
 import ssl
 import socket
-import psutil
 import secrets
 import logging
+
+import psutil
 
 from aiohttp import web
 from aiohttp_session import setup, get_session

@@ -2,43 +2,47 @@
 
 Simple python webapp to share text over LAN
 
+## Setup
+
+1. Install dependencies:
+
+    ```
+    pip install -r requirements.txt
+    ```
+
+    Install passgen module: see https://github.com/jclec/passgen
+
+    or modify these lines in server.py with your own password code:
+
+    ```py
+    if __name__ == "__main__":
+    ...
+        password = generate_passphrase(
+            num_words=2, separator="", add_symbols=True, wordlist=Wordlist.SHORT_2
+        )
+    ```
+
+2. Generate SSL certificates or bring your own into `cert/`:
+
+    (Requires openssl installed)
+
+    Linux:
+
+    ```sh
+    ./gencert.sh
+    ```
+
+    Windows:
+
+    ```ps1
+    powershell .\gencert.ps1
+    ```
+
+    This script generates `cert/server.key` and `cert/server.crt`
+
 ## Usage
 
-### 0. Install passgen module
-
-(See https://github.com/jclec/passgen)
-
-or modify these lines in server.py with your own password code:
-
-```py
-if __name__ == "__main__":
-...
-    password = generate_passphrase(
-        num_words=2, separator="", add_symbols=True, wordlist=Wordlist.SHORT_2
-    )
 ```
-
-### 1. Generate SSL certificates or bring your own into cert/
-
-(Only needed for first time setup. Requires openssl installed)
-
-Linux:
-
-```sh
-./gencert.sh
-```
-
-Windows:
-
-```ps1
-powershell .\gencert.ps1
-```
-
-This script generates `cert/server.key` and `cert/server.crt`
-
-### 2. Run server
-
-```python
 python server.py
 ```
 
