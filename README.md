@@ -34,6 +34,8 @@ Windows:
 powershell .\gencert.ps1
 ```
 
+This script generates `cert/server.key` and `cert/server.crt`
+
 ### 2. Run server
 
 ```python
